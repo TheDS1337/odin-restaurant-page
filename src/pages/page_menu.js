@@ -4,10 +4,15 @@ export default class extends Page
 {
     fill() 
     {
-        const pDOMElem = document.createElement("p");
+        const p = document.createElement("p");
 
-        pDOMElem.textContent = "Menu page";
+        p.textContent = "Menu page";
 
-        return { pDOMElem };
+        const div = document.createElement("div");
+        
+        div.id = "content";
+        div.appendChild(p);
+
+        return { div };
     };
 };

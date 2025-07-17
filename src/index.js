@@ -4,41 +4,51 @@ import MenuPage from "./pages/page_menu.js"
 import ReviewsPage from "./pages/page_reviews.js"
 import AboutPage from "./pages/page_about.js"
 
-const pages = {
-    home: new HomePage(),
-    menu: new MenuPage(),
-    reviews: new ReviewsPage(),
-    about: new AboutPage()
+const pages =
+{
+    home: {
+        button: document.querySelector("#home-button"),
+        instance: new HomePage()
+    },
+    menu: {
+        button: document.querySelector("#menu-button"),
+        instance: new MenuPage()
+    },
+    reviews: {
+        button: document.querySelector("#reviews-button"),
+        instance: new ReviewsPage()
+    },
+    about: {
+        button: document.querySelector("#about-button"),
+        instance: new AboutPage()
+    }
 }
 
-const navButtons = {
-    home: document.querySelector("#home-button"),
-    menu: document.querySelector("#menu-button"),
-    reviews: document.querySelector("#reviews-button"),
-    about: document.querySelector("#about-button")
+const onNavButtonClick = (event) => {
+    const buttonElement = event.target;
+
+    switch( buttonElement.id.split('-').shift() ) {
+        case 'home':
+            pages.home.instance.show(buttonElement);
+            break;
+
+        case 'menu':
+            pages.menu.instance.show(buttonElement);
+            break;
+
+        case 'reviews':
+            pages.reviews.instance.show(buttonElement);
+            break;
+
+        case 'about':
+            pages.about.instance.show(buttonElement);
+            break;
+    }
 }
 
-Object.values(navButtons).forEach(button => {
-    button.addEventListener("click", (event) => {
-        switch( event.target.id.split('-').shift() ) {
-            case 'home':
-                pages.home.show();
-                break;
-
-            case 'menu':
-                pages.menu.show();
-                break;
-
-            case 'reviews':
-                pages.reviews.show();
-                break;
-
-            case 'about':
-                pages.about.show();
-                break;
-        }
-    });
+Object.values(pages).forEach(page => {
+    page.button.addEventListener("click", onNavButtonClick);
 })
 
 
-pages.home.show();
+pages.home.instance.show();
