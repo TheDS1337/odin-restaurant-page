@@ -1,0 +1,32 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunkodin_restaurant_page"] = self["webpackChunkodin_restaurant_page"] || []).push([["src_pages_page_menu_js"],{
+
+/***/ "./src/page.js":
+/*!*********************!*\
+  !*** ./src/page.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Page)\n/* harmony export */ });\nclass Page\n{\n    static #main = document.querySelector(\"main\");\n\n    constructor()\n    {\n        Page.remove();\n    }\n\n    fill() {};\n\n    show(button = null) \n    {\n        // Remove current content\n        Page.remove();\n\n        // Show the new page\n        Object.values(this.fill()).forEach(child => Page.#main.appendChild(child));\n\n        if( button ) {\n            button.classList.add(\"button-clicked\");\n\n            for( let child of button.parentElement.children ) {\n                if( child === button )\n                    continue;\n\n                child.classList.remove(\"button-clicked\");\n            }\n        }\n    };\n\n    static remove()\n    {\n        let firstChild;\n        \n        while( firstChild = Page.#main.firstChild )\n            Page.#main.removeChild(firstChild);\n    }\n\n    static getMainElement = () => Page.#main;\n};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZS5qcyIsIm1hcHBpbmdzIjoiOzs7O0FBQWU7QUFDZjtBQUNBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBOztBQUVBO0FBQ0E7QUFDQTtBQUNBOztBQUVBO0FBQ0E7O0FBRUE7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL29kaW4tcmVzdGF1cmFudC1wYWdlLy4vc3JjL3BhZ2UuanM/N2UxNCJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgZGVmYXVsdCBjbGFzcyBQYWdlXG57XG4gICAgc3RhdGljICNtYWluID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIm1haW5cIik7XG5cbiAgICBjb25zdHJ1Y3RvcigpXG4gICAge1xuICAgICAgICBQYWdlLnJlbW92ZSgpO1xuICAgIH1cblxuICAgIGZpbGwoKSB7fTtcblxuICAgIHNob3coYnV0dG9uID0gbnVsbCkgXG4gICAge1xuICAgICAgICAvLyBSZW1vdmUgY3VycmVudCBjb250ZW50XG4gICAgICAgIFBhZ2UucmVtb3ZlKCk7XG5cbiAgICAgICAgLy8gU2hvdyB0aGUgbmV3IHBhZ2VcbiAgICAgICAgT2JqZWN0LnZhbHVlcyh0aGlzLmZpbGwoKSkuZm9yRWFjaChjaGlsZCA9PiBQYWdlLiNtYWluLmFwcGVuZENoaWxkKGNoaWxkKSk7XG5cbiAgICAgICAgaWYoIGJ1dHRvbiApIHtcbiAgICAgICAgICAgIGJ1dHRvbi5jbGFzc0xpc3QuYWRkKFwiYnV0dG9uLWNsaWNrZWRcIik7XG5cbiAgICAgICAgICAgIGZvciggbGV0IGNoaWxkIG9mIGJ1dHRvbi5wYXJlbnRFbGVtZW50LmNoaWxkcmVuICkge1xuICAgICAgICAgICAgICAgIGlmKCBjaGlsZCA9PT0gYnV0dG9uIClcbiAgICAgICAgICAgICAgICAgICAgY29udGludWU7XG5cbiAgICAgICAgICAgICAgICBjaGlsZC5jbGFzc0xpc3QucmVtb3ZlKFwiYnV0dG9uLWNsaWNrZWRcIik7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9O1xuXG4gICAgc3RhdGljIHJlbW92ZSgpXG4gICAge1xuICAgICAgICBsZXQgZmlyc3RDaGlsZDtcbiAgICAgICAgXG4gICAgICAgIHdoaWxlKCBmaXJzdENoaWxkID0gUGFnZS4jbWFpbi5maXJzdENoaWxkIClcbiAgICAgICAgICAgIFBhZ2UuI21haW4ucmVtb3ZlQ2hpbGQoZmlyc3RDaGlsZCk7XG4gICAgfVxuXG4gICAgc3RhdGljIGdldE1haW5FbGVtZW50ID0gKCkgPT4gUGFnZS4jbWFpbjtcbn07Il0sIm5hbWVzIjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/page.js\n\n}");
+
+/***/ }),
+
+/***/ "./src/pages/page_menu.js":
+/*!********************************!*\
+  !*** ./src/pages/page_menu.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _page_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../page.js */ \"./src/page.js\");\n\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new class extends _page_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n{\n    fill() \n    {\n        const p = document.createElement(\"p\");\n        p.textContent = \"I think you can figure it out, we sell pizzas\";\n\n        const div = document.createElement(\"div\");        \n        div.id = \"content\";\n        div.appendChild(p);\n\n        return { div };\n    };\n}());//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZXMvcGFnZV9tZW51LmpzIiwibWFwcGluZ3MiOiI7Ozs7O0FBQTZCOztBQUU3QixpRUFBZSxrQkFBa0IsZ0RBQUk7QUFDckM7QUFDQTtBQUNBO0FBQ0E7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7O0FBRUEsaUJBQWlCO0FBQ2pCO0FBQ0EsQ0FBQyxFQUFFIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vb2Rpbi1yZXN0YXVyYW50LXBhZ2UvLi9zcmMvcGFnZXMvcGFnZV9tZW51LmpzPzI4ZTUiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFBhZ2UgZnJvbSBcIi4uL3BhZ2UuanNcIlxuXG5leHBvcnQgZGVmYXVsdCBuZXcgY2xhc3MgZXh0ZW5kcyBQYWdlXG57XG4gICAgZmlsbCgpIFxuICAgIHtcbiAgICAgICAgY29uc3QgcCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoXCJwXCIpO1xuICAgICAgICBwLnRleHRDb250ZW50ID0gXCJJIHRoaW5rIHlvdSBjYW4gZmlndXJlIGl0IG91dCwgd2Ugc2VsbCBwaXp6YXNcIjtcblxuICAgICAgICBjb25zdCBkaXYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KFwiZGl2XCIpOyAgICAgICAgXG4gICAgICAgIGRpdi5pZCA9IFwiY29udGVudFwiO1xuICAgICAgICBkaXYuYXBwZW5kQ2hpbGQocCk7XG5cbiAgICAgICAgcmV0dXJuIHsgZGl2IH07XG4gICAgfTtcbn0oKTsiXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./src/pages/page_menu.js\n\n}");
+
+/***/ })
+
+}]);
