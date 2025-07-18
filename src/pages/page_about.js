@@ -1,18 +1,16 @@
 import Page from "../page.js"
 
-export default class extends Page
+export default new class extends Page
 {
     fill() 
     {
         const p = document.createElement("p");
+        p.textContent = "nothing to know about";
 
-        p.textContent = "About page";
-
-        const div = document.createElement("div");
-        
+        const div = document.createElement("div");        
         div.id = "content";
         div.appendChild(p);
 
         return { div };
     };
-};
+}();

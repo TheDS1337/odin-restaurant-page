@@ -1,6 +1,6 @@
 export default class Page
 {
-    static main = document.querySelector("main");
+    static #main = document.querySelector("main");
 
     constructor()
     {
@@ -9,15 +9,18 @@ export default class Page
 
     fill() {};
 
-    show(button=null) 
+    show(button = null) 
     {
+        // Remove current content
         Page.remove();
-        Object.values(this.fill()).forEach(child => Page.main.appendChild(child));
+
+        // Show the new page
+        Object.values(this.fill()).forEach(child => Page.#main.appendChild(child));
 
         if( button ) {
-            button.classList.toggle("button-clicked");
+            button.classList.add("button-clicked");
 
-            for( const child of button.parentElement.children ) {
+            for( let child of button.parentElement.children ) {
                 if( child === button )
                     continue;
 
@@ -30,9 +33,9 @@ export default class Page
     {
         let firstChild;
         
-        while( firstChild = Page.main.firstChild )
-            Page.main.removeChild(firstChild);
+        while( firstChild = Page.#main.firstChild )
+            Page.#main.removeChild(firstChild);
     }
 
-    static getMainElement = () => Page.main;
+    static getMainElement = () => Page.#main;
 };
